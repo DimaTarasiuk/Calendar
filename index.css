@@ -4,6 +4,29 @@
     box-sizing: border-box;
 }
 
+:root {
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 14px;
+    --spacing-4: 18px;
+    --spacing-5: 22px;
+
+    --size-1: 10px;
+    --size-2: 16px;
+    --size-3: 20px;
+    --size-4: 24px;
+    --size-5: 28px;
+    --size-6: 32px;
+    --size-7: 36px;
+
+    --radius-1: 6px;
+    --radius-1: 12px;
+
+    --color-white: #fff;
+    --color-grey: #6f88ae;
+    --color-blue: #4e6991;
+}
+
 body {
     max-height: 100vh;
 
@@ -15,10 +38,10 @@ body {
     font-family: 'Chakra Petch', sans-serif;
 }
 
-.header__conteiner {
+.header__container {
     width: 80%;
     margin: 130px auto 0;
-    border-radius:14px;
+    border-radius: 12px;
     background-image: url('https://avatanplus.com/files/resources/original/58daa4a66c7d015b16132a2c.jpg');
     background-size: cover;
     mask-repeat: no-repeat;
@@ -26,31 +49,30 @@ body {
 }
 
 .header__title {
+    padding-top: var(--spacing-4);
     text-align: center;
-    padding: 20px;
-    color:#4e6991;
+    color: var(--color-blue);
     font-weight: 600;
-    font-size: 36px;
+    font-size: var(--size-7);
 }
 
-.header__nav {
-    background-color: #6f88ae;
+.menu {
+    background-color: var(--color-grey);
 }
 
-.header__list {
+.menu__list {
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: var(--spacing-5);
     margin-left: 450px;
-    color: #fff;
+    color: var(--color-white);
 }
 
-.header__list-item {
-    text-decoration: none;
+.menu__list-item {
     list-style: none;
 }
 
-main{
+main {
     display: grid;
     grid-template-columns: 1fr 2fr;
     width: 80%;
@@ -58,21 +80,54 @@ main{
     height: 500px;
 }
 
-.sider__container{
-    padding: 10px;
-    background-color: red;
-    min-height: 100%;
+.sider__container {
+    background-image: url('https://avatanplus.com/files/resources/original/58daa4a66c7d015b16132a2c.jpg');
+    background-size: cover;
+    mask-repeat: no-repeat;
+    background-position: top center;
 }
-.calendar__container{
-    padding: 10px;
+
+.calendar__container {
     background-color: blue;
+}
+
+.container {
+    padding: var(--spacing-2);
     min-height: 100%;
 }
 
-.weather{
+.weather {
     background-color: #6f88ae;
 
 }
-.button{
+
+.button {
     padding: 5px;
+}
+
+.sider__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-2);
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: var(--radius-1);
+    margin: var(--spacing-1) 0;
+}
+
+.button-icon {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    width: 22px;
+    height: 22px;
+    stroke: var(--color-white);
+}
+
+.sider__button-text {
+    display: flex;
+    font-size: var(--size-3);
 }

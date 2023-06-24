@@ -5,28 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Dosis:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Dosis:wght@200&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <header>
-        <div class="header__conteiner">
+        <div class="header__container">
 
             <h2 class="header__title">
                 Crown Household Calender
             </h2>
-            <nav class="header__nav">
-                <ul class="header__list">
-                    <li class="header__list-item">Monday</li>
-                    <li class="header__list-item">Tuesday</li>
-                    <li class="header__list-item">Wednesday</li>
-                    <li class="header__list-item">Thursday</li>
-                    <li class="header__list-item">Friday</li>
-                    <li class="header__list-item">Saturday</li>
-                    <li class="header__list-item">Sunday</li>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item">Monday</li>
+                    <li class="menu__list-item">Tuesday</li>
+                    <li class="menu__list-item">Wednesday</li>
+                    <li class="menu__list-item">Thursday</li>
+                    <li class="menu__list-item">Friday</li>
+                    <li class="menu__list-item">Saturday</li>
+                    <li class="menu__list-item">Sunday</li>
                 </ul>
             </nav>
         </div>
@@ -34,26 +37,102 @@
 
     <main>
         <section class="sider">
-            <div class="sider__container">
-                    <div class="weather">weather</div>
+            <div class="sider__container container">
 
-                
-                    <button class="button">
-                        <span style="background-image: url('/ico/kachka.svg');" class="ico">
-                        </span>
-                        <p>Add shift</p>
-                        <span>+</span>
-                        </button>
+                <a href='#' class='sider__button click'>
+                    <p class='sider__button-text'>
+                        <span class='button-icon' style="background-image: url('/icon/kachka.svg')"></span>
+                        Add shift
+                    </p>
+                    <span class='button-icon' style="background-image: url('/icon/plus.svg')"></span>
+                </a>
+
+                <a href='#' class='sider__button click'>
+                    <p class='sider__button-text'>
+                        <span class='button-icon' style="background-image: url('/icon/kachka.svg')"></span>
+                        Delete shift
+                    </p>
+                    <span class='button-icon' style="background-image: url('/icon/plus.svg')"></span>
+                </a>
+
+                <div class="weather">
+                    <h2 class="weather__title">Weather</h2>
+
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/"
+                        data-label_1="current" data-label_2="WEATHER" data-font="Verdana">NEW YORK WEATHER</a>
+                    <script>
+                        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                    </script>
+
+                    <a class="weatherwidget-io" href="https://forecast7.com/en/49d2328d47/vinnytsia/"
+                        data-label_1="VINNITSA" data-label_2="WEATHER" data-font="Verdana" data-days="5"
+                        data-theme="blue-mountains">VINNITSA WEATHER</a>
+                    <script>
+                        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+                    </script>
+
+<script>
+    (function(d, s, id) {
+        if (d.getElementById(id)) {
+            if (window.__TOMORROW__) {
+                window.__TOMORROW__.renderWidget();
+            }
+            return;
+        }
+        const fjs = d.getElementsByTagName(s)[0];
+        const js = d.createElement(s);
+        js.id = id;
+        js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+        fjs.parentNode.insertBefore(js, fjs);
+    })(document, 'script', 'tomorrow-sdk');
+    </script>
+
+    <div class="tomorrow"
+       data-location-id=""
+       data-language="EN"
+       data-unit-system="METRIC"
+       data-skin="light"
+       data-widget-type="upcoming"
+       style="padding-bottom:22px;position:relative;"
+    >
+      <a
+        href="https://www.tomorrow.io/weather-api/"
+        rel="nofollow noopener noreferrer"
+        target="_blank"
+        style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
+      >
+        <img
+          alt="Powered by the Tomorrow.io Weather API"
+          src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
+          width="250"
+          height="18"
+        />
+      </a>
+    </div>
+                </div>
 
 
+                <!-- <button class="button">
+                    <span style="background-image: url('/ico/kachka.svg');" class="ico">
+                    </span>
+                    <p>Add shift</p>
+                    <span>+</span>
+                </button> -->
 
-                    <button class="button">Who is on shift shift</button>
+
+                <!-- <button class="button">Who is on shift shift</button> -->
             </div>
         </section>
 
         <section class="calendar">
-            <div class="calendar__container">
-//asdfghj
+            <div class="calendar__container container">
+                <!-- <iframe
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Asia%2FJerusalem&showTitle=1&showTabs=0&showPrint=1&src=b3VyLmFjYy5tci5hbmQubWlzc0BnbWFpbC5jb20&src=NzJmYjYwODlhOTRmY2RiZGQzZDRiYTY5ZjJlM2YxZDhjYzU2ZDNjOTY1OTZkNjI3ZGQwOTUxYzM1ODVmNmM4ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23AD1457&color=%2333B679"
+                    style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Asia%2FJerusalem&showTitle=1&showTabs=0&showPrint=1&src=b3VyLmFjYy5tci5hbmQubWlzc0BnbWFpbC5jb20&src=NzJmYjYwODlhOTRmY2RiZGQzZDRiYTY5ZjJlM2YxZDhjYzU2ZDNjOTY1OTZkNjI3ZGQwOTUxYzM1ODVmNmM4ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%23AD1457&color=%2333B679"
+                    style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
             </div>
         </section>
     </main>
